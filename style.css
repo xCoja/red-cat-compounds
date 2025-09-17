@@ -10,13 +10,20 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  min-height: 100vh; /* full viewport height */
   text-align: center;
-  background: linear-gradient(-45deg, #000000, #1a1a1a, #b30000, #660000);
+  background: linear-gradient(-45deg, #000000, #1a1a1a, #960000, #660000);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
+}
+
+main {
+  flex: 1;  /* takes remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 @keyframes gradientShift {
@@ -70,15 +77,18 @@ p {
 }
 
 /* Footer */
+
 footer {
-  position: absolute;
-  bottom: 20px;
+  width: 100%;         
   font-size: 0.8rem;
   color: #ccc;
-  max-width: 90%;
-  text-align: center;
+  text-align: center;  
+  padding: 10px 0;
 }
+
 footer p {
+  width: 100%;          
+  margin: 0 auto;       
   color: #ccc;
-  font-size: 18px;
+  font-size: 0.9rem;    
 }
